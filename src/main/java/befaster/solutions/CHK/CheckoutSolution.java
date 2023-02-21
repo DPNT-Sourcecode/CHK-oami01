@@ -97,11 +97,12 @@ public class CheckoutSolution {
            }
            if(groupOfThree.size()==3)
            {
-               for(int j=0;j<3;j++)
-                   basket.replace(groupOfThree.get(j),basket.get(groupOfThree.get(j))-1);
+               for(int j=0;j<3;j++) {
+                   basket.replace(groupOfThree.get(j), basket.get(groupOfThree.get(j)) - 1);
+                   groupOfThree.remove(j);
+               }
                total+=45;
                i=0;
-               groupOfThree.removeAllElements();
            }
         }
 
@@ -124,6 +125,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
