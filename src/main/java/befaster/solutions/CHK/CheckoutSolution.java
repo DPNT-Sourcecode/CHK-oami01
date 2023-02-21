@@ -7,7 +7,7 @@ import befaster.solutions.CHK.SpecialOffers.*;
 
 import java.util.HashMap;
 import java.util.Map;
-
+    //La CHK_R4 mi-am dat seama ca nu trebuie sa o fac interfata si sa am implementare in functie de un Map pentru fiecare oferta
 
 public class CheckoutSolution {
     public static Integer checkout(String skus) {
@@ -102,5 +102,6 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
