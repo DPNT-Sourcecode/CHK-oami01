@@ -26,11 +26,12 @@ public class CheckoutSolution {
         if(specialOffers.containsKey(skus))
             return specialOffers.get(skus);
         else {
-            return (skus.charAt(0))*prices.get(skus.charAt(1));
+            return (skus.charAt(0)-60)*prices.get(skus.charAt(1));
         }
 
     }
 }
+
 
 
 
