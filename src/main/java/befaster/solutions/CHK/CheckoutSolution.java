@@ -25,17 +25,10 @@ public class CheckoutSolution {
         if (specialOffers.containsKey(skus))
             return specialOffers.get(skus);
         else {
-            int pricePerProduct=prices.get(String.valueOf(skus.charAt(skus.length()-1)));
-            if(skus.length()>1)
-            {
-                skus=skus.substring(0,skus.length()-1);
-                return Integer.parseInt(skus)*pricePerProduct;
-            }
-            else{
-                return pricePerProduct;
-            }
+           return prices.get(skus);
 
         }
 
     }
 }
+
