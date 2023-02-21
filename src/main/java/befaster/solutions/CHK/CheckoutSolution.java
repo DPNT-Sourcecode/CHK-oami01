@@ -21,6 +21,27 @@ public class CheckoutSolution {
         prices.put("D", 15);
         prices.put("E",40);
         prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+        prices.put("F",10);
+
         prices.put("", 0);
 
         Map<String, SpecialOffer> specialOffers = new HashMap<>();
@@ -77,6 +98,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
