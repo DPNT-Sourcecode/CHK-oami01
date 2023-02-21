@@ -8,7 +8,8 @@ public class MultiPricingOfferF implements MultiPricingOffer{
         String product="F";
         Integer quantity=basket.get(product);
         if(basket.get(product)>3)
-            basket.put("F",basket.get("F")-quantity/3);
+            basket.replace("F",basket.get("F")-quantity/2);
     }
 }
+
 
