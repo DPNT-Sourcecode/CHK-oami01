@@ -93,7 +93,8 @@ public class CheckoutSolution {
         {
            if(basket.containsKey(groupOffer[i]))
            {
-               groupOfThree.add(groupOffer[i]);
+              for(int j=0;j<3&&j<basket.get(groupOffer[i]);j++)
+                  groupOfThree.add(groupOffer[i]);
            }
            if(groupOfThree.size()==3)
            {
@@ -126,6 +127,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
