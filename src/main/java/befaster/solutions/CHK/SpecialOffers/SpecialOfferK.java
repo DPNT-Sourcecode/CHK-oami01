@@ -23,4 +23,3 @@ public class SpecialOfferK implements SpecialOffer{
         return reward+quantity*prices.get(product);
     }
 }
-

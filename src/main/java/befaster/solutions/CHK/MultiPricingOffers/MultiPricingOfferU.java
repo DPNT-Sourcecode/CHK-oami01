@@ -15,6 +15,3 @@ public class MultiPricingOfferU implements MultiPricingOffer {
         return basket;
     }
 }
-
-
-

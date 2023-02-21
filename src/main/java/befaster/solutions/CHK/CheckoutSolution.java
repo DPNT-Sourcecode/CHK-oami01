@@ -8,7 +8,8 @@ import befaster.solutions.CHK.SpecialOffers.*;
 
 import java.util.HashMap;
 import java.util.Map;
-    //La CHK_R4 mi-am dat seama ca nu trebuie sa o fac interfata si sa am implementare in functie de un Map pentru fiecare oferta
+import java.util.Vector;
+//La CHK_R4 mi-am dat seama ca nu trebuie sa o fac interfata si sa am implementare in functie de un Map pentru fiecare oferta
 
 public class CheckoutSolution {
     public static Integer checkout(String skus) {
@@ -60,6 +61,8 @@ public class CheckoutSolution {
        multiPricingOffer.put("R",new MultiPricingOfferR());
        multiPricingOffer.put("U",new MultiPricingOfferU());
 
+        Vector<String> groupOffer={"S",T}
+
 
         Map<String, Integer> basket = new HashMap<>();
 
@@ -107,7 +110,4 @@ public class CheckoutSolution {
 
     }
 }
-
-
-
 
