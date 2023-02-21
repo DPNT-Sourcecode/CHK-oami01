@@ -1,9 +1,14 @@
 package befaster.solutions.CHK;
 
+import befaster.solutions.CHK.SpecialOffers.SpecialOffer;
+import befaster.solutions.CHK.SpecialOffers.SpecialOfferA;
+import befaster.solutions.CHK.SpecialOffers.SpecialOfferB;
+import befaster.solutions.CHK.SpecialOffers.SpecialOfferE;
 import javafx.util.Pair;
 
 import java.util.HashMap;
 import java.util.Map;
+
 
 public class CheckoutSolution {
     public static Integer checkout(String skus) {
@@ -13,11 +18,13 @@ public class CheckoutSolution {
         prices.put("B", 30);
         prices.put("C", 20);
         prices.put("D", 15);
+        prices.put("E",40);
         prices.put("", 0);
 
-        Map<String,Pair<Integer,Integer>> specialOffers = new HashMap<>();
-        specialOffers.put("A",new Pair<>(3,130));
-        specialOffers.put("B",new Pair<>(2,45));
+        Map<String, SpecialOffer> specialOffers = new HashMap<>();
+        specialOffers.put("A",new SpecialOfferA());
+        specialOffers.put("B",new SpecialOfferB());
+        specialOffers.put("E",new SpecialOfferE());
 
         Map<String, Integer> basket = new HashMap<>();
 
@@ -36,23 +43,23 @@ public class CheckoutSolution {
 
         int total = 0;
         for (Map.Entry<String, Integer> entry : basket.entrySet()) {
-            String product=entry.getKey();
-            Integer quantity=entry.getValue();
-          if(specialOffers.containsKey(product))
-            {
-                Integer quantityForSpecial=specialOffers.get(product).getKey();
-                Integer priceForSpecial=specialOffers.get(product).getValue();
-                total+=quantity/quantityForSpecial*priceForSpecial+quantity%quantityForSpecial*prices.get(product);
-            }
-          else
-          {
-              total+=prices.get(product)*quantity;
-          }
+           String product=entry.getKey();
+           Integer quantity=entry.getValue();
+           if(specialOffers.containsKey(product))
+           {
+               total+=specialOffers.get(product).getReward(basket);
+           }
+           else
+           {
+               total+=prices.get(product)*quantity;
+           }
+
         }
 
         return total;
 
     }
 }
+
 
 
