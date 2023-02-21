@@ -20,9 +20,9 @@ public class CheckoutSolution {
         prices.put("D", 15);
         prices.put("", 0);
 
-        Map<Pair<String, Integer>, Integer> specialOffers = new HashMap<>();
-        specialOffers.put(new Pair<String, Integer>("A", 3), 130);
-        specialOffers.put(new Pair<String, Integer>("B", 2), 45);
+        Map<String,Pair<Integer,Integer>> specialOffers = new HashMap<>();
+        specialOffers.put("A",new Pair<>(3,130));
+        specialOffers.put("B",new Pair<>(2,45));
 
         Map<String, Integer> basket = new HashMap<>();
 
@@ -41,21 +41,14 @@ public class CheckoutSolution {
 
         int total = 0;
         for (Map.Entry<String, Integer> entry : basket.entrySet()) {
-            if (specialOffers.containsKey(new Pair<>(entry.getKey(), entry.getValue())))
-                total += specialOffers.get(new Pair<>(entry.getKey(), entry.getValue()));
-            else
-                total += prices.get(entry.getKey()) * entry.getValue();
+          if(specialOffers.containsKey(entry.getKey()))
+            {
+                if(specialOffers.get(entry.getKey()).)
+            }
         }
 
         return total;
 
     }
 }
-
-
-
-
-
-
-
 
