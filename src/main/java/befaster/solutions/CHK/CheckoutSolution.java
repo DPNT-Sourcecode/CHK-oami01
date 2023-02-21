@@ -34,13 +34,14 @@ public class CheckoutSolution {
 
             if(basket.containsKey(skus.charAt(i)))
             {
-                basket.set;
+                basket.put("");
             }
         }
 
     }
 
 }
+
 
 
 
