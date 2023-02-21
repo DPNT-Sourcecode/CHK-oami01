@@ -23,17 +23,25 @@ public class CheckoutSolution {
         specialOffers.put("3A", 130);
         specialOffers.put("2B", 45);
 
-        if (specialOffers.containsKey(skus))
-            return specialOffers.get(skus);
-        else if (prices.containsKey(skus))
-            return prices.get(skus);
-        else {
-            return -1;
+        Map<String,Integer> basket=new HashMap<>();
+
+        for(int i=0;i<skus.length();i++)
+        {
+            if(prices.containsKey(skus.charAt(i))==false)
+            {
+                return -1;
+            }
+
+            if(basket.containsKey(skus.charAt(i)))
+            {
+                basket.set;
+            }
         }
 
     }
 
 }
+
 
 
 
