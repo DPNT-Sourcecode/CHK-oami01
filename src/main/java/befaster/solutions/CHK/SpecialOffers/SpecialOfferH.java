@@ -1,19 +1,18 @@
 package befaster.solutions.CHK.SpecialOffers;
 
 import javafx.util.Pair;
-
 import java.util.Map;
 import java.util.Vector;
 
-public class SpecialOfferK implements SpecialOffer{
-
+public class SpecialOfferH implements SpecialOffer{
     @Override
     public Integer getReward(Map<String, Integer> basket, Map<String, Integer> prices) {
-        String product="K";
+        String product="H";
         Integer quantity=basket.get(product);
         int reward=0;
         Vector<Pair<Integer,Integer>> offers=new Vector<>();
-        offers.add(new Pair<>(2,150));
+        offers.add(new Pair<>(10,80));
+        offers.add(new Pair<>(5,45));
 
         for(int i=0;i<offers.size();i++)
         {
@@ -23,4 +22,3 @@ public class SpecialOfferK implements SpecialOffer{
         return reward+quantity*prices.get(product);
     }
 }
-
