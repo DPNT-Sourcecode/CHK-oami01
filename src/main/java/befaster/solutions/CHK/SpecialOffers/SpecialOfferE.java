@@ -8,9 +8,8 @@ public class SpecialOfferE implements SpecialOffer {
     public Integer getReward(Map<String, Integer> basket,Map<String, Integer> prices) {
         String product="E";
         Integer quantity=basket.get(product);
-        if(basket.containsKey("B"))
-        basket.put("B",basket.get("B")-quantity/2);
-        return quantity*prices.get(product);
+        return quantity*prices.get(product)-prices.get("B")*(quantity/2);
     }
 }
+
 
