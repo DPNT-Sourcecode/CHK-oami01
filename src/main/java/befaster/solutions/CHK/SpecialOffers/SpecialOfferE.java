@@ -11,6 +11,3 @@ public class SpecialOfferE implements SpecialOffer {
         return quantity*prices.get(product);
     }
 }
-
-
-
