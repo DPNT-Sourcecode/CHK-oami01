@@ -44,11 +44,16 @@ public class CheckoutSolution {
             }
         }
 
-        for(int i=0;i<basket.)
+        int total=0;
+        for(Map.Entry<String,Integer> entry:basket.entrySet())
+        {
+            
+        }
 
     }
 
 }
+
 
 
 
