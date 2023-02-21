@@ -9,11 +9,12 @@ public class MultiPricingOfferU implements MultiPricingOffer {
         Integer quantity=basket.get(product);
         if(basket.get(product)>=4)
         {
-            Integer newValue=basket.get("B")-quantity/4;
-            basket.remove("B");
-            basket.put("B",newValue);
+            Integer newValue=basket.get("U")-quantity/4;
+            basket.remove("U");
+            basket.put("U",newValue);
         }
         return basket;
     }
 }
+
 
