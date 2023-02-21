@@ -7,8 +7,7 @@ public class MultiPricingOfferU implements MultiPricingOffer {
     public Map<String, Integer> modifyBasket(Map<String, Integer> basket) {
         String product="U";
         Integer quantity=basket.get(product);
-        if(basket.get(product)>=4)
-        {
+        if(basket.get(product)>=4) {
             Integer newValue=basket.get("U")-quantity/4;
             basket.remove("U");
             basket.put("U",newValue);
@@ -16,5 +15,6 @@ public class MultiPricingOfferU implements MultiPricingOffer {
         return basket;
     }
 }
+
 
 
