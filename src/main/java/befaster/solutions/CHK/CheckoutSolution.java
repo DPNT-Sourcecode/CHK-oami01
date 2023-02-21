@@ -1,6 +1,7 @@
 package befaster.solutions.CHK;
 
 import befaster.runner.SolutionNotImplementedException;
+import javafx.util.Pair;
 
 import java.util.AbstractMap;
 import java.util.HashMap;
@@ -19,28 +20,36 @@ public class CheckoutSolution {
         prices.put("D", 15);
         prices.put("", 0);
 
-        Map<String, Integer> specialOffers = new HashMap<>();
-        specialOffers.put("3A", 130);
-        specialOffers.put("2B", 45);
+        Map<Pair<String,Integer>, Integer> specialOffers = new HashMap<>();
+        specialOffers.put(new Pair<String,Integer>("A",3), 130);
+        specialOffers.put(new Pair<String,Integer>("B",2),45);
 
         Map<String,Integer> basket=new HashMap<>();
 
         for(int i=0;i<skus.length();i++)
         {
-            if(prices.containsKey(skus.charAt(i))==false)
+            String currentProduct= String.valueOf(skus.charAt(i));
+            if(prices.containsKey(currentProduct)==false)
             {
                 return -1;
             }
 
-            if(basket.containsKey(skus.charAt(i)))
+            if(basket.containsKey(currentProduct))
             {
-                basket.put("");
+                basket.replace(currentProduct,basket.get(currentProduct)+1);
+            }
+            else
+            {
+                basket.put(currentProduct,1);
             }
         }
+
+        for(int i=0;i<basket.)
 
     }
 
 }
+
 
 
 
