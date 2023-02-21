@@ -1,14 +1,9 @@
 package befaster.solutions.CHK;
 
-import befaster.runner.SolutionNotImplementedException;
 import javafx.util.Pair;
 
-import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Stream;
-
-import static jdk.nashorn.internal.runtime.JSType.toInteger;
 
 public class CheckoutSolution {
     public static Integer checkout(String skus) {
@@ -41,14 +36,23 @@ public class CheckoutSolution {
 
         int total = 0;
         for (Map.Entry<String, Integer> entry : basket.entrySet()) {
-          if(specialOffers.containsKey(entry.getKey()))
+            String product=entry.getKey();
+            Integer quantity=entry.getValue();
+          if(specialOffers.containsKey(product))
             {
-                if(specialOffers.get(entry.getKey()).)
+                Integer quantityForSpecial=specialOffers.get(product).getKey();
+                Integer priceForSpecial=specialOffers.get(product).getValue();
+                total+=quantity/quantityForSpecial*priceForSpecial+quantity%quantityForSpecial*prices.get(product);
             }
+          else
+          {
+              total+=prices.get(product)*quantity;
+          }
         }
 
         return total;
 
     }
 }
+
 
