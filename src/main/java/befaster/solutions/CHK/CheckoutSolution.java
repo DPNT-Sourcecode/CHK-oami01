@@ -42,6 +42,9 @@ public class CheckoutSolution {
         }
 
         int total = 0;
+
+        if(basket.containsKey("E"))
+
         for (Map.Entry<String, Integer> entry : basket.entrySet()) {
            String product=entry.getKey();
            Integer quantity=entry.getValue();
@@ -60,4 +63,5 @@ public class CheckoutSolution {
 
     }
 }
+
 
