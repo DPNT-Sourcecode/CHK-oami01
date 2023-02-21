@@ -61,8 +61,7 @@ public class CheckoutSolution {
        multiPricingOffer.put("R",new MultiPricingOfferR());
        multiPricingOffer.put("U",new MultiPricingOfferU());
 
-        Vector<String> groupOffer={"S",T}
-
+        String[] groupOffer= new String[]{"S", "T", "X", "Y", "Z"};
 
         Map<String, Integer> basket = new HashMap<>();
 
@@ -89,7 +88,22 @@ public class CheckoutSolution {
             }
         }
 
-
+        Vector<String> groupOfThree = new Vector<>();
+        for(int i=0;i<groupOffer.length;i++)
+        {
+           if(basket.containsKey(groupOffer[i]))
+           {
+               groupOfThree.add(groupOffer[i]);
+           }
+           if(groupOfThree.size()==3)
+           {
+               for(int j=0;j<3;j++)
+                   basket.replace(groupOfThree.get(j),basket.get(groupOfThree.get(j))-1);
+               total+=45;
+               i=0;
+               groupOfThree.removeAllElements();
+           }
+        }
 
 
         for (Map.Entry<String, Integer> entry : basket.entrySet()) {
@@ -110,4 +124,5 @@ public class CheckoutSolution {
 
     }
 }
+
 
