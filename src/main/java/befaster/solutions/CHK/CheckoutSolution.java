@@ -17,6 +17,7 @@ public class CheckoutSolution {
         prices.put("B", 30);
         prices.put("C", 20);
         prices.put("D", 15);
+        prices.put("", 0);
 
         Map<String, Integer> specialOffers = new HashMap<>();
         specialOffers.put("3A", 130);
@@ -24,11 +25,15 @@ public class CheckoutSolution {
 
         if (specialOffers.containsKey(skus))
             return specialOffers.get(skus);
+        else if (prices.containsKey(skus))
+            return prices.get(skus);
         else {
-           return prices.get(skus);
-
+            return -1;
         }
 
     }
+
 }
+
+
 
