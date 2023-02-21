@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class MultiPricingOfferF implements MultiPricingOffer{
     @Override
-    public void modifyBasket(Map<String, Integer> basket) {
+    public Map<String,Integer> modifyBasket(Map<String, Integer> basket) {
         String product="F";
         Integer quantity=basket.get(product);
         if(basket.get(product)>3) {
@@ -12,8 +12,10 @@ public class MultiPricingOfferF implements MultiPricingOffer{
             basket.remove("F");
             basket.put("F",newValue);
         }
+        return basket;
     }
 }
+
 
 
 

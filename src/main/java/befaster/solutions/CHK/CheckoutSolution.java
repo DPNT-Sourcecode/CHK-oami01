@@ -51,8 +51,9 @@ public class CheckoutSolution {
         for(Map.Entry<String, MultiPricingOffer> entry:multiPricingOffer.entrySet())
         {
             String product=entry.getKey();
-            if(basket.containsKey(product))
-                entry.getValue().modifyBasket(basket);
+            if(basket.containsKey(product)) {
+                basket=entry.getValue().modifyBasket(basket);
+            }
         }
 
 
@@ -76,6 +77,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 

@@ -7,7 +7,7 @@ public class MultiPricingOfferE implements MultiPricingOffer {
 
 
     @Override
-    public void modifyBasket(Map<String, Integer> basket) {
+    public Map<String,Integer> modifyBasket(Map<String, Integer> basket) {
         String product="E";
         Integer quantity=basket.get(product);
         if(basket.get(product)>2)
@@ -16,8 +16,10 @@ public class MultiPricingOfferE implements MultiPricingOffer {
             basket.remove("B");
             basket.put("B",newValue);
         }
+        return basket;
     }
 }
+
 
 
 
