@@ -1,8 +1,9 @@
 package befaster.solutions.CHK;
 
-import befaster.solutions.CHK.MultiPricingOffers.MultiPricingOffer;
-import befaster.solutions.CHK.MultiPricingOffers.MultiPricingOfferE;
-import befaster.solutions.CHK.MultiPricingOffers.MultiPricingOfferF;
+import befaster.solutions.CHK.MultiPricingOffers.*;
+
+
+
 import befaster.solutions.CHK.SpecialOffers.*;
 
 import java.util.HashMap;
@@ -55,6 +56,10 @@ public class CheckoutSolution {
        Map<String, MultiPricingOffer> multiPricingOffer=new HashMap<>();
        multiPricingOffer.put("E",new MultiPricingOfferE());
        multiPricingOffer.put("F",new MultiPricingOfferF());
+       multiPricingOffer.put("N",new MultiPricingOfferN());
+       multiPricingOffer.put("R",new MultiPricingOfferR());
+       multiPricingOffer.put("U",new MultiPricingOfferU());
+
 
         Map<String, Integer> basket = new HashMap<>();
 
@@ -102,6 +107,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
