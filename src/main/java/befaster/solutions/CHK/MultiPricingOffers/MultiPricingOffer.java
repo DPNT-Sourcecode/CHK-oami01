@@ -6,5 +6,3 @@ public interface MultiPricingOffer {
 
     abstract Map<String,Integer> modifyBasket(Map<String,Integer> basket);
 }
-
-
