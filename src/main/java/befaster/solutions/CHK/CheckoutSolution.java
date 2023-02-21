@@ -43,7 +43,10 @@ public class CheckoutSolution {
 
         int total = 0;
 
-        if(basket.containsKey("E"))
+        if(basket.containsKey("E")&&basket.containsKey("B"))
+        {
+            basket.put("B",basket.get("B")-basket.get("E")/2);
+        }
 
         for (Map.Entry<String, Integer> entry : basket.entrySet()) {
            String product=entry.getKey();
@@ -63,5 +66,6 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
