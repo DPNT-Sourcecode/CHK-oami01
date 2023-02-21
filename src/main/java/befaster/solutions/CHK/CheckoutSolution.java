@@ -97,9 +97,10 @@ public class CheckoutSolution {
            }
            if(groupOfThree.size()==3)
            {
-               for(int j=0;j<3;j++) {
-                   basket.replace(groupOfThree.get(j), basket.get(groupOfThree.get(j)) - 1);
-                   groupOfThree.remove(j);
+               for(int j=0;j<groupOfThree.size();j++) {
+                  Integer newValue=basket.get(groupOfThree.get(j))-1;
+                  basket.remove(groupOfThree.get(j));
+                  basket.put(groupOfThree.get(j),newValue);
                }
                total+=45;
                i=0;
@@ -125,6 +126,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
