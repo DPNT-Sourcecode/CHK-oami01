@@ -14,11 +14,11 @@ public class CheckoutSolution {
     public static Integer checkout(String skus) {
 
         Map<String, Integer> prices = new HashMap<>();
+        prices.put("E",40);
         prices.put("A", 50);
         prices.put("B", 30);
         prices.put("C", 20);
         prices.put("D", 15);
-        prices.put("E",40);
         prices.put("", 0);
 
         Map<String, SpecialOffer> specialOffers = new HashMap<>();
@@ -47,7 +47,7 @@ public class CheckoutSolution {
            Integer quantity=entry.getValue();
            if(specialOffers.containsKey(product))
            {
-               total+=specialOffers.get(product).getReward(basket);
+               total+=specialOffers.get(product).getReward(basket,prices);
            }
            else
            {
@@ -60,6 +60,4 @@ public class CheckoutSolution {
 
     }
 }
-
-
 

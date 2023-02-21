@@ -5,7 +5,6 @@ import java.util.Map;
 public interface SpecialOffer {
 
 
-    abstract Integer getReward(Map<String, Integer> basket);
+    abstract Integer getReward(Map<String, Integer> basket,Map<String, Integer> prices);
 
 }
-
